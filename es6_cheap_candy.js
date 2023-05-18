@@ -14,9 +14,16 @@ let products = [
 
 // which candies cost less than 4.00
 
-let someProducts = products.filter(product => product.price <= 4.00);
-
-function getPrice(arrayElement) {
-    console.log(arrayElement.price );
+function isProductlessThan4(currentProduct){
+    return (currentProduct.price <4)
 }
-someProducts.forEach(someProducts);
+let cheapCandy = products.filter(product => product.price < 4.00);
+
+let totalCountofCheapCandy = cheapCandy.length;
+
+for (let i = 0 ; i < totalCountofCheapCandy ; i++) {
+    let currentProduct = cheapCandy[i];
+    console.log(`the product ${currentProduct.product} costs ${currentProduct.price})
+
+}
+
